@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Assignment 6</title>
+    <style>
+        .container0 {
+            height: 200vh;
+
+        }
+
+        .container {
+            height: 100px;
+            width: 1510px;
+            background-color: red;
+            position: fixed;
+        }
+
+        .src_1 {
+            height: 100px;
+            width: 100px;
+
+        }
+
+        .menu{
+            display: inline-block;
+            padding: 8px;
+        }
+        .menu:hover{
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .cont{
+          float: right;
+          margin-right: 50px;
+          font-size: 25px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container0">
+        <div class="container">
+
+            <div class="cont">
+                <p class="menu">Menu 1</p>
+                <p class="menu">Menu 2</p>
+                <p class="menu">Menu 3</p>
+                <p class="menu">Menu 4</p>
+            </div>
+            <img src="logo.jpg" alt="" class="src_1">
+
+
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop()) {
+                /*
+                  $('.container').stop().animate({ height: "50px" }, 100);
+                  $('.src_1').stop().animate({ height: "50px" }, 100); */
+                $('.container').height(50);
+                $('.src_1').height(50);
+                $(".cont").css("font-size", "12px");
+
+            }
+            else {
+
+
+                /*   $('.container').stop().animate({ height: "100px" }, 100);
+                  $('.src_1').stop().animate({ height: "100px" }, 100);  */
+                $('.container').height(100);
+                $('.src_1').height(100);
+                $(".cont").css("font-size", "25px");
+            }
+        })
+    })
+</script>
+
+</html>
